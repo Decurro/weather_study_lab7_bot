@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+
+  tg_bot:
+    build: ./
+    command: >
+      bash -c "python app/main.py"
+
+    volumes:
+      - .:/app
+
+    restart: on-failure
